@@ -84,10 +84,41 @@
             height: 200px;
             border-radius: 50%;
             margin: 0 auto 20px;
-            background: linear-gradient(45deg, #74b9ff, #a8e6cf);
             position: relative;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* 멤버별 개성있는 그라데이션 프로필 이미지 */
+        .minji-image {
+            background: linear-gradient(45deg, #FFB6C1, #FFC0CB);
+        }
+
+        .hanni-image {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+        }
+
+        .danielle-image {
+            background: linear-gradient(45deg, #98FB98, #90EE90);
+        }
+
+        .haerin-image {
+            background: linear-gradient(45deg, #87CEEB, #00BFFF);
+        }
+
+        .hyein-image {
+            background: linear-gradient(45deg, #DDA0DD, #DA70D6);
+        }
+
+        /* 멤버 이미지에 귀여운 패턴 추가 */
+        .member-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
         }
         
         .member-card h2 {
@@ -119,7 +150,7 @@
         
         <div class="members">
             <div class="member-card">
-                <div class="member-image"></div>
+                <div class="member-image minji-image"></div>
                 <h2>민지</h2>
                 <div class="member-info">
                     <p>생년월일: 2004.05.07</p>
@@ -129,7 +160,7 @@
             </div>
 
             <div class="member-card">
-                <div class="member-image"></div>
+                <div class="member-image hanni-image"></div>
                 <h2>하니</h2>
                 <div class="member-info">
                     <p>생년월일: 2004.10.06</p>
@@ -139,7 +170,7 @@
             </div>
 
             <div class="member-card">
-                <div class="member-image"></div>
+                <div class="member-image danielle-image"></div>
                 <h2>다니엘</h2>
                 <div class="member-info">
                     <p>생년월일: 2005.04.11</p>
@@ -149,7 +180,7 @@
             </div>
 
             <div class="member-card">
-                <div class="member-image"></div>
+                <div class="member-image haerin-image"></div>
                 <h2>해린</h2>
                 <div class="member-info">
                     <p>생년월일: 2006.05.15</p>
@@ -159,7 +190,7 @@
             </div>
 
             <div class="member-card">
-                <div class="member-image"></div>
+                <div class="member-image hyein-image"></div>
                 <h2>혜인</h2>
                 <div class="member-info">
                     <p>생년월일: 2008.04.21</p>
