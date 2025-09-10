@@ -5,55 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewJeans Profile</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #e0f2ff, #d4e6ff);
+            min-height: 100vh;
         }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
+        
         .header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+        
         .header h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+        
+        .header p {
+            color: #34495e;
+            font-size: 1.2em;
+        }
+        
         .members {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
+        
         .member-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .member-card img {
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        .member-image {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            object-fit: cover;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #74b9ff, #a8e6cf);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .member-card h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
             margin-bottom: 15px;
         }
-        .member-card h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
+        
         .member-card p {
-            color: #666;
-            margin-bottom: 5px;
+            color: #34495e;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .member-info {
+            background: rgba(236, 240, 241, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -66,38 +119,53 @@
         
         <div class="members">
             <div class="member-card">
-                <img src="https://example.com/minji.jpg" alt="민지">
+                <div class="member-image"></div>
                 <h2>민지</h2>
-                <p>생년월일: 2004.05.07</p>
-                <p>포지션: 리더, 메인댄서</p>
+                <div class="member-info">
+                    <p>생년월일: 2004.05.07</p>
+                    <p>포지션: 리더, 메인댄서</p>
+                    <p>별명: 토끼</p>
+                </div>
             </div>
 
             <div class="member-card">
-                <img src="https://example.com/hanni.jpg" alt="하니">
+                <div class="member-image"></div>
                 <h2>하니</h2>
-                <p>생년월일: 2004.10.06</p>
-                <p>포지션: 리드보컬</p>
+                <div class="member-info">
+                    <p>생년월일: 2004.10.06</p>
+                    <p>포지션: 리드보컬</p>
+                    <p>별명: 피치</p>
+                </div>
             </div>
 
             <div class="member-card">
-                <img src="https://example.com/danielle.jpg" alt="다니엘">
+                <div class="member-image"></div>
                 <h2>다니엘</h2>
-                <p>생년월일: 2005.04.11</p>
-                <p>포지션: 메인보컬</p>
+                <div class="member-info">
+                    <p>생년월일: 2005.04.11</p>
+                    <p>포지션: 메인보컬</p>
+                    <p>별명: 날다람쥐</p>
+                </div>
             </div>
 
             <div class="member-card">
-                <img src="https://example.com/haerin.jpg" alt="해린">
+                <div class="member-image"></div>
                 <h2>해린</h2>
-                <p>생년월일: 2006.05.15</p>
-                <p>포지션: 리드보컬</p>
+                <div class="member-info">
+                    <p>생년월일: 2006.05.15</p>
+                    <p>포지션: 리드보컬</p>
+                    <p>별명: 앙꼬</p>
+                </div>
             </div>
 
             <div class="member-card">
-                <img src="https://example.com/hyein.jpg" alt="혜인">
+                <div class="member-image"></div>
                 <h2>혜인</h2>
-                <p>생년월일: 2008.04.21</p>
-                <p>포지션: 메인래퍼</p>
+                <div class="member-info">
+                    <p>생년월일: 2008.04.21</p>
+                    <p>포지션: 메인래퍼</p>
+                    <p>별명: 막내</p>
+                </div>
             </div>
         </div>
     </div>
